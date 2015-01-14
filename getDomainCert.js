@@ -25,7 +25,7 @@ amqp_create.queues[config.rabbitmq.queue] = {
 		});
 		
 	},
-	prefectch_count: 20,
+	prefetch_count: 20,
 	ack: true,
 	durable: true,
 	autoDelete: false
