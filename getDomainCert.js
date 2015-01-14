@@ -19,10 +19,9 @@ amqp_create.queues[config.rabbitmq.queue] = {
 		url = url.replace(/^www./,'')
 		getCertInfo(url, function(certChain){
 			if(certChain.length > 0){
-				collection.insert({key: url, certs: certChain}, function(){
-					message.acknowledge(false);
-				});
+				collection.insert({key: url, certs: certChain}, function(){});
 			}
+			message.acknowledge(false);
 		});
 		
 	},
